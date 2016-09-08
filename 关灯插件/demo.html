@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关灯效果</title>
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<style type="text/css">
+      *{
+	margin: 0;
+	padding: 0 auto;
+		}
+		body{
+			background-color: #000;
+		}
+		ul{
+			width: 650px;
+			font:80px/160px "微软雅黑";
+			display: block;
+			margin: 100px 350px;
+		}
+		ul li{
+		   display: block;
+		   outline-style: none;
+		   width: 160px;
+		   height: 160px;
+		   background-color: red;
+		   text-align:center;
+		   float: left;
+		}
+		ul li a{
+			display: block;
+			width: 160px;
+		    height: 160px;
+			text-decoration:none;
+			color: #fff;
+		}
+        ul li a img{
+			width: 160px;
+		    height: 160px;
+		}
+		.on{
+			opacity: 1;
+		}
+		.off{
+			opacity: 0.5;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="demo.js"></script>
+	<script type="text/javascript">
+		$(function(){
+           // $().turnoff("turn_on");
+           $("ul.light li").hover(function(){
+           	 $(this).attr("class","on")
+           	       .siblings().attr("class","off")
+           },function(){
+           	$(this).parent().children().attr("class","on");
+             }
+           )
+		});
+	</script>
+</head>
+<body>
+	<div class="bg">
+		<ul class="light">
+			<li><a href="#" id="turn_on"><img src="images/01.jpg"></a></li>
+			<li><a href="#" id="turn_on"><img src="images/02.jpg"></a></li>
+			<li><a href="#" id="turn_on"><img src="images/03.jpg"></a></li>
+			<li><a href="#" id="turn_on"><img src="images/04.jpg"></a></li>
+			<li><a href="#" id="turn_on"><img src="images/05.jpg"></a></li>
+			<li><a href="#" id="turn_on"><img src="images/06.jpg"></a></li>
+			<li><a href="#" id="turn_on"><img src="images/07.jpg"></a></li>
+			<li><a href="#" id="turn_on"><img src="images/08.jpg"></a></li>
+		</ul>
+	</div>
+</body>
+</html>

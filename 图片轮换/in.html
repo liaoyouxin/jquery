@@ -1,0 +1,15 @@
+         
+          var index=0;
+          var time;  
+          function show(){
+               
+               index=index%6+1;
+               var picname="images/dd_scroll_"+index+".jpg";
+               $("#dd_scroll").attr("src",picname)
+            }
+           setInterval("show()",1000);
+            // $("ul li").mouseover(function(){
+            //     var i=$(this).text();
+            //     $(this).parent().prev().attr("src","images/dd_scroll_"+i+".jpg")
+            // })
+        })
